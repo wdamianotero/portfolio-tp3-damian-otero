@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Damian Otero - Curriculum Vitae: Portfolio</title>
+    <link href="estilo.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo-landing">
+            <img src="img/logo-damian-otero.svg" alt="Logo" width="113" height="46" />
+        </a>
+
+        <nav class="menu-nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre mi</a></li>
+                <li><a href="portfolio.html" class="activo">Trabajos</a></li>
+                <!-- Acá puse un class "activo" para que cuando esté en esa página, el nav quede el botón destacado -->
+            </ul>
+        </nav>
+
+        <a href="https://wa.me/5491154740721" target="_blank" class="hablemos">¡Hablemos!</a>
+
+        <a href="#" class="menu-hamburguesa" aria-label="Abrir menú">
+            <img src="img/button-menu-toggle.svg" alt="Menú" width="35" height="35">
+        </a>
+    </header>
+
+    <main class="main-portfolio">
+
+        <section class="text-portfolio">
+            <h3 class="title-portfolio">Mis trabajos</h3>
+            <p class="text-portfolio">Una muestra de proyectos desarrollados para marcas, instituciones y proyectos
+                culturales.</p>
+        </section>
+
+        <ul class="thumbs-portfolio">
+            <li class="portfolio-ale"><a href="#popup-ale">
+                    <img src="img/img-portfolio/work-ale.png" alt="Proyecto ALÉ" width="425" height="460">
+                </a>
+            </li>
+            <li class="portfolio-ciber"><a href="#popup-ciber"><img src="img/img-portfolio/work-ciber.png"
+                        alt="Proyecto Ciber" width="425" height="460"></a>
+            </li>
+            <li class="portfolio-piyo"><a href="#popup-piyo"><img src="img/img-portfolio/work-piyo.png"
+                        alt="Proyecto Piyo" width="425" height="460"></a></li>
+            <li class="portfolio-berazategui"><a href="#popup-berazategui"><img
+                        src="img/img-portfolio/work-berazategui.png" alt="Proyecto Berazategui" width="425"
+                        height="460"></a></li>
+            <li class="portfolio-advance"><a href="#popup-advance"><img src="img/img-portfolio/work-advance.png"
+                        alt="Proyecto Advance" width="425" height="460"></a></li>
+            <li class="portfolio-mediopelo"><a href="#popup-mediopelo"><img src="img/img-portfolio/work-mediopelo.png"
+                        alt="Proyecto Medio Pelo" width="425" height="460"></a></li>
+        </ul>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <!-- Acá puse un div container para poder acomodar las tres secciones con display flex -->
+
+            <ul class="footer-list">
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="#sobre-mi">SOBRE MI</a></li>
+                <li><a href="#trabajos">TRABAJOS</a></li>
+            </ul>
+
+            <div class="footer-center">
+
+                <div class="forms-text-container">
+                    <h3>¡TRABAJEMOS JUNTXS!</h3>
+                    <p>Cargá tus datos y a la brevedad te estaré respondiendo.</p>
+                </div>
+
+                <form class="footer-form">
+                    <input type="text" class="forms-input" placeholder="Nombre" required>
+                    <input type="email" class="forms-input" placeholder="Correo" required>
+                    <input type="tel" class="forms-input" placeholder="Teléfono">
+                    <button type="submit" class="footer-forms-button">¡Hablemos!</button>
+                </form>
+
+            </div>
+
+            <div class="footer-contact-rrss">
+                <ul class="footer-rrss">
+                    <li><a href="https://linkedin.com/w-damian-otero" target="_blank" aria-label="LinkedIn"><img
+                                src="img/linkedin-footer.svg" alt="LinkedIn" width="30" height="30"></a></li>
+                    <li><a href="https://behance.net/damianoterodg" target="_blank" aria-label="Behance"><img
+                                src="img/behance-footer.svg" alt="Behance" width="30" height="30"></a></li>
+                </ul>
+                <ul class="footer-contact">
+                    <li><a href="mailto:wdamian.otero@gmail.com">wdamian.otero@gmail.com</a></li>
+                    <li><a href="https://wa.me/5491154740721">+54 9 11 5474-0721</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- a partir de acá arranca el pop-up con la info del proyecto. Hay uno solo hecho de ejemplo que es el primero-->
+
+    <div class="popup-overlay" id="popup-ale">
+        <!-- este divs un contenedor general del popup que tiene el id para abrirlo/cerrarlo y para generar un fondo traslúcido que oscurece la pantalla de atrás -->
+
+        <!-- usé article en lugar de un div genérico, ya que el popup encapsula el contenido de un proyecto -->
+        <article class="popup-container">
+
+            <a href="#" class="popup-close" aria-label="Cerrar popup">
+                <img src="img/img-portfolio/button-x.svg" alt="Cerrar" width="20" height="20">
+            </a>
+            <!--el "#" es para que tenga un destino vacío, osea que vuelve a la página del portfolio -->
+
+            <div class="popup-grid-content">
+
+                <!-- usé figure en vez de div apra evitar el abuso de su aplicación.  -->
+                <figure class="popup-galeria">
+                    <a href="#ampliar-imagen-1">
+                        <img src="img/img-portfolio/ale-popup-1.png" alt="Panadería ALÉ principal" width="437"
+                            height="437" class="img-grande">
+                    </a>
+
+                    <!-- esta es la fila de miniaturas -->
+                    <ul class="thumbs-chicas">
+                        <li><a href="#ampliar-imagen-2"><img src="img/img-portfolio/ale-popup-2.png" alt="Detalle 1"
+                                    width="169" height="169"></a></li>
+                        <li><a href="#ampliar-imagen-3"><img src="img/img-portfolio/ale-popup-3.png" alt="Detalle 2"
+                                    width="169" height="169"></a></li>
+                        <li><a href="#ampliar-imagen-4"><img src="img/img-portfolio/ale-popup-4.png" alt="Detalle 3"
+                                    width="169" height="169"></a></li>
+                    </ul>
+                </figure>
+
+                <section class="popup-info">
+                    <h3 class="title-ale">Panadería ALÉ</h3>
+
+                    <div class="data-block">
+                        <p class="year">Año</p>
+                        <p class="year-number">2022</p>
+                    </div>
+
+                    <hr class="line">
+
+                    <div class="data-block">
+                        <p class="year">Descripción</p>
+                        <p class="text-ale">Renovación de Panadería ALÉ en Adrogué. Simplificación, identidad
+                            tipográfica y coherencia visual.</p>
+                    </div>
+
+                    <hr class="line">
+
+                    <div class="program-ale">
+                        <img src="img/logos-herramientas/illustrator-logo.svg" alt="Illustrator" width="25" height="25">
+                        <img src="img/logos-herramientas/photoshop-logo.svg" alt="Photoshop" width="25" height="25">
+                    </div>
+
+                    <a href="https://www.behance.net/gallery/137665171/Al-Rebranding" target="_blank"
+                        class="behance-ale">Ir a Behance</a>
+                </section>
+            </div>
+        </article>
+    </div>
+
+    <!-- a partir de acá son las ampliaciones de las imágenes -->
+     <!-- lo que armé fue un div contenedor para el botón "X" y la imagen ampliada. Lo apliqué en las 4 imágenes -->
+
+    <div class="popup-overlay" id="ampliar-imagen-1">
+        <div class="popup-container-imagen">
+            <a href="#popup-ale" class="popup-close" aria-label="Cerrar ampliación">
+                <img src="img/img-portfolio/button-x.svg" alt="Cerrar" width="20" height="20">
+            </a>
+            <img src="img/img-portfolio/ale-popup-1.png" alt="Panadería ALÉ ampliación 1" width="677" height="677">
+        </div>
+    </div>
+
+    <div class="popup-overlay" id="ampliar-imagen-2">
+        <div class="popup-container-imagen">
+            <a href="#popup-ale" class="popup-close" aria-label="Cerrar ampliación">
+                <img src="img/img-portfolio/button-x.svg" alt="Cerrar" width="20" height="20">
+            </a>
+            <img src="img/img-portfolio/ale-popup-2.png" alt="Detalle 1 ampliación" width="677" height="677">
+        </div>
+    </div>
+
+    <div class="popup-overlay" id="ampliar-imagen-3">
+        <div class="popup-container-imagen">
+            <a href="#popup-ale" class="popup-close" aria-label="Cerrar ampliación">
+                <img src="img/img-portfolio/button-x.svg" alt="Cerrar" width="20" height="20">
+            </a>
+            <img src="img/img-portfolio/ale-popup-3.png" alt="Detalle 2 ampliación" width="677" height="677">
+        </div>
+    </div>
+
+    <div class="popup-overlay" id="ampliar-imagen-4">
+        <div class="popup-container-imagen">
+            <a href="#popup-ale" class="popup-close" aria-label="Cerrar ampliación">
+                <img src="img/img-portfolio/button-x.svg" alt="Cerrar" width="20" height="20">
+            </a>
+            <img src="img/img-portfolio/ale-popup-4.png" alt="Detalle 3 ampliación" width="677" height="677">
+        </div>
+    </div>
+
+    </article>
+    </div>
+</body>
+
+</html>

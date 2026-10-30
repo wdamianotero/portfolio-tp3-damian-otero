@@ -1,284 +1,748 @@
-/* CSS DOCUMENT */
-@charset "utf-8";
+    /* CSS DOCUMENT */
+    @charset "utf-8";
 
-/*configuraciones generales*/
+    /*configuraciones generales*/
 
-@font-face {
-    font-family: Rubik-titulos;
-    src: url(fonts/Rubik-VariableFont_wght.ttf) format(truetype);
-    font-weight: 700;
-    font-style: normal;
-}
+    @font-face {
+        font-family: Rubik-titulos;
+        src: url(fonts/Rubik-VariableFont_wght.ttf) format(truetype);
+        font-weight: 700;
+        font-style: normal;
+    }
 
-@font-face {
-    font-family: Overpass;
-    src: url(fonts/Overpass-VariableFont_wght.ttf) format(truetype);
-    font-weight: 400;
-    font-style: normal;
-}
+    @font-face {
+        font-family: Overpass;
+        src: url(fonts/Overpass-VariableFont_wght.ttf) format(truetype);
+        font-weight: 400;
+        font-style: normal;
+    }
 
-@font-face {
-    font-family: Overpass-destacados;
-    src: url(fonts/Overpass-VariableFont_wght.ttf) format(truetype);
-    font-weight: 700;
-    font-style: normal;
-}
+    @font-face {
+        font-family: Overpass-destacados;
+        src: url(fonts/Overpass-VariableFont_wght.ttf) format(truetype);
+        font-weight: 700;
+        font-style: normal;
+    }
 
-/*configuración de aplicaciones*/
+    /*configuración de aplicaciones*/
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Overpass', Arial, Helvetica, sans-serif;
-}
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Overpass', Arial, Helvetica, sans-serif;
+    }
 
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: white;
-    padding: 15px 5%;
-    z-index: 1000;
-    /*Estuve viendo el link que me pasaste para z-index y sumado a lo que encontré en internet, recomiendan poner un número alto entre 1000 a 9999 para garantizar que ningún elemento lo tape al hacer scroll*/
-}
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: white;
+        padding: 15px 5%;
+        z-index: 1000;
+        /*Estuve viendo el link que me pasaste para z-index y sumado a lo que encontré en internet, recomiendan poner un número alto entre 1000 a 9999 para garantizar que ningún elemento lo tape al hacer scroll*/
+    }
 
-.logo-landing {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    .logo-landing {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-.botonera ul {
-    display: flex;
-    gap: 25px;
-    align-items: center;
-    list-style-type: none;
-}
+    .menu-nav ul {
+        display: flex;
+        gap: 65px;
+        align-items: center;
+        list-style-type: none;
+    }
 
-.botonera a {
-    color: #0d62c2;
-    font-weight: 400;
-    font-size: 1.2rem;
-    text-decoration: none;
-    white-space: nowrap;
-}
+    .menu-nav a {
+        color: #0d62c2;
+        font-weight: 400;
+        font-size: 1.2rem;
+        text-decoration: none;
+        white-space: nowrap;
+    }
 
-.botonera li a:hover {
-    text-decoration: underline;
-}
+    .menu-nav li a:hover {
+        font-weight: 700;
+    }
 
-.hablemos {
-    background-color: #1466C2;
-    color: white;
-    padding: 10px 24px;
-    border-radius: 30px;
-    border: none;
-    font-weight: 700;
-    font-size: 1.2rem;
-    font-family: 'Overpass-destacados', Arial, Helvetica, sans-serif;
-    text-decoration: none;
-}
+    .menu-nav .activo {
+        font-weight: 700;
+        color: #1466C2;
+        text-decoration: underline;
+    }
 
-section[id] {
-    scroll-margin-top: 80px;
-}
+    .hablemos {
+        background-color: #1466C2;
+        color: white;
+        padding: 10px 24px;
+        border-radius: 30px;
+        border: 2px solid #1466C2;
+        font-weight: 700;
+        font-size: 1.2rem;
+        font-family: 'Overpass-destacados', Arial, Helvetica, sans-serif;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
 
-.hero {
-    height: 80vh;
-    /*En base al comentario que pusiste que pareciera que la página termina en el hero, tomé la decision de achicar el hero, pero voy a tener en cuenta para seguir desarrollando esta landing y crear en el futuro un botón*/
-    max-height: 750px;
-    background: url('img/hero-fondo.png') no-repeat;
-    background-size: contain;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    /*esto no produce cambios*/
-    padding: 0 10%;
-    /*acá decidí no sacar el align-center y padding porque si los borro, sí me produce cambios en la web y no encuentro la solución para que no suceda. Dejo tu comentario de referencia*/
-}
+    .hablemos:hover {
+        background-color: #ffffff;
+        color: #1466C2;
+        border: 2px solid #1466C2;
+    }
 
-.hero-content {
-    max-width: 600px;
-}
+    section[id] {
+        scroll-margin-top: 80px;
+    }
 
-.hero-content h1 {
-    font-size: 3.0rem;
-    font-weight: 700;
-    font-family: 'Rubik-titulos', Arial, Helvetica, sans-serif;
-    line-height: 1.2;
-}
+    .hero {
+        padding: 40px 10% 40px 10%;
+        min-height: auto;
+        background-color: #1466C2;
+        display: flex;
+        flex-direction: row;
+        /* Fuerza que estén lado a lado en PC */
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+    }
 
-.hero-content h2 {
-    font-size: 2.3rem;
-    font-weight: 700;
-    font-family: 'Rubik-titulos', Arial, Helvetica, sans-serif;
-}
+    /* Tuve que cambiar el html y poner el video como una sección más y no como fondo porque me complicó para hacer la versión responsive */
 
-.hero-content p {
-    margin: 20px 0 40px;
-    font-size: 1.2rem;
-    font-weight: 400;
-}
+    .hero-content {
+        max-width: 600px;
+    }
 
-.hero-content .hero-botones {
-    display: flex;
-    gap: 20px;
-}
+    .hero-img-container video {
+        max-width: 750px;
+        width: 100%;
+        height: auto;
+        display: block;
+        justify-content: center;
+    }
+        /* El video tiene poco margen respecto al nav porque como arranca desde una distancia y se va acercando a la camara, consideré que se acomodaba mejor así */
 
-.hero-botones a {
-    width: 250px;
-    padding: 12px 20px;
-    text-align: center;
-    background: white;
-    border-radius: 50px;
-    font-family: 'Overpass-destacados', Arial, Helvetica, sans-serif;
-    color: #1466C2;
-    font-size: 1.2rem;
-    text-decoration: none;
-    font-weight: 700;
-}
 
-.sobre-mi h2 {
-    font-size: 2.3rem;
-    font-family: 'Rubik-titulos', Arial, Helvetica, sans-serif;
-    text-align: center;
-    margin-bottom: 15px;
-}
+    .hero-content h1 {
+        font-size: 3.0rem;
+        font-weight: 700;
+        font-family: 'Rubik-titulos', Arial, Helvetica, sans-serif;
+        line-height: 1.2;
+    }
 
-.sobre-mi p {
-    text-align: center;
-    max-width: 700px;
-    margin: 0 auto;
-    text-wrap: balance;
-    font-family: 'Overpass', Arial, Helvetica, sans-serif;
-    font-size: 1.2rem;
-    /*Agregué max-width al párrafo para que no se vea tan ancho. Vi en varios hilos de reddit que la mayoría recomienda ese valor (700px). También me quedaron unas viudas, pero no pude ajustarlas con el text-wrap. La opción "pretty" no me la reconoce tampoco*/
-}
+    .hero-content h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        font-family: 'Rubik-titulos', Arial, Helvetica, sans-serif;
+    }
 
-.experiencias {
-    padding: 40px 20px;
-    max-width: 1100px; /*Agrandé el max-widht de 650 a 1100px para que entren dos columnas*/
-    margin: 0 auto;
-}
+    .hero-content p {
+        margin: 20px 0 40px;
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
 
-.experiencias h2 {
-    font-size: 2.3rem;
-    font-family: 'Rubik-titulos', Arial, Helvetica, sans-serif;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 15px;
-}
+    .hero-content .hero-botones {
+        display: flex;
+        gap: 20px;
+    }
 
-.experiencias-contenedor {
-    display:flex;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-}
+    .hero-botones a {
+        width: 250px;
+        padding: 12px 20px;
+        text-align: center;
+        background: white;
+        border-radius: 50px;
+        border: 2px solid #ffffff;
+        font-family: 'Overpass-destacados', Arial, Helvetica, sans-serif;
+        color: #1466C2;
+        font-size: 1.2rem;
+        text-decoration: none;
+        font-weight: 700;
+    }
 
-.experiencias article {
-   flex-basis: 400px;
-   flex-grow: 0;
-   flex-shrink: 0;
-   margin: 30px;
-}
-/*Acá resolví como indicaste, revisitando los videos de flex-wrap, basis, grow y shrink. Fue tocando un poco y creo que e resultado quedó como el que realizaste de ejemplo*/
+    .hero-botones a:hover {
+        background-color: #1466C2;
+        color: #ffffff;
+        border: 2px solid #ffffff;
+    }
 
-span {
-    font-family: 'Overpass-destacados', Arial, Helvetica, sans-serif;
-    font-weight: 700;
-}
+    .menu-hamburguesa {
+        display: none;
+    }
 
-.experiencias h3 {
-    font-size: 1.4rem;
-    font-family: 'Rubik-titulos', Arial, Helvetica, sans-serif;
-    text-transform: uppercase;
-    text-align: center;
-}
+    main {
+        background-color: #1466C2;
+        color: white;
+        padding-top: 50px;
+        /*Agregué padding-top, porque la barra blanca del nav me cortaba la cabeza de la foto*/
+    }
 
-.puesto,
-.anio {
-    font-size: 1.3rem;
-    font-family: 'Overpass-destacados', Arial, Helvetica, sans-serif;
-    font-weight: 700;
-    text-align: center;
-}
+    footer {
+        background-color: #222222;
+        width: 100%;
+        height: 420px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-.experiencias ul {
-    padding-left: 18px;
-    margin-top: 10px;
-}
+    .footer-container {
+        width: 100%;
+        max-width: 1920px;
+        height: 100%;
+        padding: 0 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-.experiencias li {
-    font-size: 1.2rem;
-    margin-bottom: 6px;
-}
+    .footer-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
 
-.herramientas h2 {
-    font-size: 2.3rem;
-    font-family: 'Rubik-titulos', Arial, Helvetica, sans-serif;
-    font-weight: 700;
-    text-align: center;
-}
+    .footer-list a {
+        text-decoration: none;
+        color: #ffffff;
+        font-weight: 400;
+        font-size: 1rem;
+        position: relative;
+        padding-bottom: 4px;
+    }
 
-.herramientas ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 60px;
-    padding: 40px;
-}
+    .footer-list a:hover {
+        text-decoration: underline;
+    }
 
-.herramientas li {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+    .footer-center {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        max-width: 400px;
+        width: 100%;
+    }
 
-main {
-    background-color: #1466C2;
-    color: white;
-    padding-top: 50px;
-    /*Agregué padding-top, porque la barra blanca del nav me cortaba la cabeza de la foto*/
-}
+    .forms-text-container {
+        text-align: center;
+    }
 
-footer {
-    background-color: #2b2b2b;
-    padding: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    .forms-text-container h3 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #ffffff;
+        font-family: 'Rubik-titulos', Arial, Helvetica, sans-serif;
+        margin-bottom: 5px;
+    }
 
-.contacto-footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-}
+    .forms-text-container p {
+        text-decoration: none;
+        color: #ffffff;
+        font-weight: 400;
+        font-size: 1rem;
+        margin-bottom: 5px;
+    }
 
-.contacto-footer .email,
-.contacto-footer .telefono {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: 400;
-}
+    .footer-form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
 
-.contacto-footer a:hover {
-    text-decoration: underline;
-}
+    .forms-input {
+        width: 100%;
+        padding: 10px 15px;
+        background-color: #ffffff;
+        border: none;
+        border-radius: 20px;
+        font-size: 1rem;
+        color: #5f5b5b;
+        outline: none;
+    }
 
-.redes-sociales {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    margin-top: 8px;
-}
+    .footer-forms-button {
+        width: 50%;
+        margin: 0 auto;
+        padding: 10px 15px;
+        background-color: #dacece;
+        color: #222222;
+        border: 2px solid #ffffff;
+        border-radius: 20px;
+        font-size: 1rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .footer-forms-button:hover {
+        background-color: #222222;
+        color: #ffffff;
+    }
+
+    .footer-contact-rrss {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-end;
+    }
+
+    .footer-rrss {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        gap: 12px;
+    }
+
+    .footer-rrss a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        transition: background-color 0.3s ease;
+    }
+
+    .footer-rrss a:hover {
+        opacity: 0.7;
+        /* quise evitar agregar más svg al repositorio, entonces la animación es esta opacidad */
+    }
+
+    .footer-contact {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        text-align: right;
+    }
+
+    .footer-contact a {
+        text-decoration: none;
+        color: #cccccc;
+        font-size: 1rem;
+        transition: color 0.2s ease;
+    }
+
+    .footer-contact a:hover {
+        text-decoration: underline;
+    }
+
+    /* acá arranca el css de portfolio.html */
+
+
+    .main-portfolio {
+        background-color: white;
+    }
+
+    .text-portfolio {
+        padding: 60px 10% 20px 10%;
+        color: #1466C2;
+    }
+
+    .text-portfolio h3 {
+        font-size: 2rem;
+        font-family: 'Rubik-titulos', Arial, Helvetica, sans-serif;
+        font-weight: 700;
+        color: #1466C2;
+        line-height: 1;
+        /* puse esto para elimirar el "aire interno" (la caja interna del título) */
+        margin-top: 0;
+        margin-bottom: 40px;
+        padding: 0;
+    }
+
+    .text-portfolio p {
+        font-size: 1.2rem;
+        color: #1466C2;
+        line-height: 1;
+        /* misma idea acá. Si no ponía line-height, me quedaba todo muy separado */
+        margin-top: 0;
+        margin-bottom: 40px;
+        padding: 0;
+    }
+
+    .thumbs-portfolio {
+        list-style: none;
+        padding: 0 10% 80px 10%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        /* armé 3 columnas iguales */
+        gap: 30px;
+        /* con este gap genero una separación entre las tarjetas sin renegar con márgenes */
+    }
+
+    .thumbs-portfolio li {
+        overflow: hidden;
+        border-radius: 12px;
+    }
+
+    .thumbs-portfolio img {
+        height: auto;
+        display: block;
+        border-radius: 12px;
+        transition: transform 0.3s ease;
+        /* con esto suavizo la animación del zoom. el "ease" hace que la animación comience lenta, acelere en el medio y termine de forma suave */
+    }
+
+    .thumbs-portfolio li:hover img {
+        transform: scale(1.05);
+        /* hace un acercamiento de la foto */
+    }
+
+    /* acá arranca el css del pop-up de portfolio.html */
+
+    .popup-overlay {
+        display: none;
+        /* el display está "none" para que permanezca oculto */
+        position: fixed;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.75);
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    .popup-overlay:target {
+        display: flex;
+        /* esto lo usé para que al hacer clic detecte el popup superponiéndose con un fondo traslúcido */
+    }
+
+    .popup-container {
+        position: relative;
+        width: 90%;
+        max-width: 1250px;
+        height: auto;
+        max-height: 90vh;
+        background-color: #1466C2;
+        border-radius: 16px;
+        padding: 50px 65px;
+        box-sizing: border-box;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        overflow-y: auto;
+        /* Las tiras de tres imágenes se salían del contenedor, con esto logré evitar que se salgan y permite scroll si falta altura */
+    }
+
+    .popup-close {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        background: white;
+        border: none;
+        border-radius: 50%;
+        width: 38px;
+        height: 38px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        z-index: 10;
+        text-decoration: none;
+    }
+
+    .popup-close img {
+        display: block;
+        width: 16px;
+        height: 16px;
+    }
+
+    .popup-grid-content {
+        display: grid;
+        grid-template-columns: 437px 1fr;
+        gap: 65px;
+        align-items: start;
+    }
+
+    .popup-galeria {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .img-grande {
+        object-fit: cover;
+        border-radius: 12px;
+        display: block;
+    }
+
+    .thumbs-chicas {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        gap: 16px;
+    }
+
+    .thumbs-chicas img {
+        object-fit: cover;
+        border-radius: 8px;
+        display: block;
+    }
+
+    .popup-info {
+        color: white;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .title-ale {
+        font-size: 2rem;
+        font-family: 'Rubik-titulos', Arial, Helvetica, sans-serif;
+        line-height: 1;
+        margin-top: 0;
+        margin-bottom: 25px;
+        padding: 0;
+    }
+
+    .popup-info .year {
+        font-size: 1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .year-number {
+        font-size: 1rem;
+        margin-top: 4px;
+        margin-bottom: 0;
+        font-weight: 500;
+    }
+
+    .text-ale {
+        font-size: 1.05rem;
+        line-height: 1.35;
+        margin-top: 6px;
+        margin-bottom: 0;
+    }
+
+    .popup-info .line {
+        border: none;
+        border-top: 1px solid white;
+        margin: 20px 0;
+    }
+
+    .program-ale {
+        display: flex;
+        gap: 12px;
+        margin-top: 5px;
+        margin-bottom: 30px;
+    }
+
+    .program-ale img {
+        display: block;
+    }
+
+    .behance-ale {
+        background-color: white;
+        color: #0d62c2;
+        border-radius: 30px;
+        border: 2px solid #1466C2;
+        text-align: center;
+        padding: 12px 28px;
+        font-weight: bold;
+        font-size: 1rem;
+        text-decoration: none;
+        width: fit-content;
+        transition: all 0.3s ease;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .behance-ale:hover {
+        background-color: #1466C2;
+        color: white;
+        border: 2px solid white;
+    }
+
+    /*Acá comienza la ampliación de las imágenes dentro del pop-up.*/
+
+    .popup-container-imagen {
+        position: relative;
+        /* lo puse en relative para que la "X" se posicione de forma "absoluta" respecto a esta caja */
+        border-radius: 20px;
+        padding: 40px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .popup-container-imagen .popup-close {
+        top: 20px;
+        right: 20px;
+    }
+
+    .popup-container-imagen .popup-close img {
+        display: block;
+        width: 16px;
+        height: 16px;
+    }
+
+    .popup-container-imagen img {
+        display: block;
+        border-radius: 12px;
+        object-fit: cover;
+    }
+
+    /*Acá comienza la parte responsive.*/
+
+    @media (max-width: 500px) {
+
+        header {
+            padding: 15px 20px;
+        }
+
+        .menu-nav,
+        header .hablemos {
+            display: none;
+        }
+
+        .menu-hamburguesa {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero {
+            padding: 20px 20px 30px 20px;
+            flex-direction: column-reverse;
+            align-items: center;
+            text-align: left;
+            gap: 8px;
+        }
+
+        .hero-img-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* usé esto para que redimencione el video y que se llene en el contenedor sin que pierda su proporción */
+            display: block;
+        }
+
+        .hero-content {
+            max-width: 100%;
+            margin-top: 0;
+            /* No sé porqué, pero poniendo esto me dejó de  poner márgenes raros */
+        }
+
+        .hero-content h1 {
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+        }
+
+        .hero-content h2 {
+            font-size: 1.6rem;
+        }
+
+        .hero-content p {
+            font-size: 1rem;
+            margin: 15px 0 25px;
+        }
+
+        .hero-content .hero-botones {
+            flex-direction: column;
+            gap: 12px;
+            align-items: stretch;
+        }
+
+        .hero-botones a {
+            width: 100%;
+            padding: 12px 0;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        footer {
+            height: auto;
+            padding: 40px 24px;
+        }
+
+        .footer-container {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 24px;
+            padding: 0;
+        }
+
+        .footer-list {
+            width: 100%;
+            align-items: flex-start;
+            gap: 12px;
+            border-bottom: 1px solid white;
+            /* es el filete que separa las secciones en el footer mobile */
+            padding-bottom: 20px;
+        }
+
+        .footer-list a {
+            font-weight: 400;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+        }
+
+        .footer-contact-rrss {
+            width: 100%;
+            align-items: flex-start;
+            gap: 14px;
+            padding-bottom: 20px;
+        }
+
+        .footer-rrss {
+            justify-content: flex-start;
+            gap: 14px;
+        }
+
+        .footer-contact a {
+            font-size: 1rem;
+        }
+
+        .footer-center {
+            max-width: 100%;
+            width: 100%;
+            gap: 16px;
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid white;
+        }
+
+
+        .forms-text-container {
+            text-align: left;
+            color: #ffffff;
+        }
+
+        .forms-text-container h3 {
+            font-size: 2rem;
+        }
+
+        .forms-text-container p {
+            font-size: 1rem;
+        }
+
+        .footer-form {
+            gap: 10px;
+        }
+
+        .footer-forms-button {
+            width: 65%;
+            margin: 10px auto 0 auto;
+            background-color: #ffffff;
+            color: #222222;
+            padding: 10px;
+        }
+
+        .footer-contact {
+            text-align: left;
+        }
+
+    }
